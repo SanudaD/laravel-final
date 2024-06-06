@@ -22,6 +22,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/editproduct/{Productid}',[ProductController::class,'edit'])->name("products.edit");
     Route::post('/editproduct/{Productid}',[ProductController::class,'update'])->name("products.update");
     Route::get('/deleteproduct/{Productid}',[ProductController::class,'destroy'])->name("products.destroy");
+    Route::get('/html', [TemplateController::class,'index']);
 });
 
 require __DIR__.'/auth.php';
